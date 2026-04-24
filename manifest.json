@@ -1,0 +1,25 @@
+{
+  "name": "SegOrg MB - Estudo Interativo",
+  "short_name": "SegOrg MB",
+  "description": "Aplicativo de estudos interativo sobre Segurança Orgânica da Marinha do Brasil — resumos, mapa mental, flashcards e exercícios.",
+  "start_url": "/Dinandes/",
+  "scope": "/Dinandes/",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#ffd700",
+  "lang": "pt",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
