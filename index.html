@@ -1074,5 +1074,36 @@ function App() {
     const rootEl = ReactDOM.createRoot(document.getElementById('root'));
     rootEl.render(React.createElement(App));
   </script>
+
+<!-- Botão PIX Apoio -->
+<div id="pix-apoio" style="position:fixed;bottom:16px;right:16px;z-index:9999;font-family:'Segoe UI',sans-serif;">
+  <button onclick="document.getElementById('pix-modal').style.display='flex'"
+    style="background:#32BCAD;color:#fff;border:none;border-radius:50px;padding:10px 18px;font-size:14px;font-weight:bold;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.25);display:flex;align-items:center;gap:8px;">
+    ☕ Apoiar com PIX
+  </button>
+</div>
+<div id="pix-modal" onclick="if(event.target===this)this.style.display='none'"
+  style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:10000;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;padding:28px 24px;max-width:320px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <div style="font-size:2rem;margin-bottom:8px;">☕</div>
+    <h3 style="margin:0 0 6px;color:#333;font-size:1.1rem;">Apoie este projeto</h3>
+    <p style="color:#666;font-size:.9rem;margin-bottom:16px;">Se este app te ajudou, considere uma contribuição via PIX!</p>
+    <div style="background:#f5f5f5;border-radius:10px;padding:12px;margin-bottom:14px;">
+      <div style="font-size:.75rem;color:#999;margin-bottom:4px;">Chave PIX (celular)</div>
+      <div style="font-size:1.05rem;font-weight:bold;color:#32BCAD;letter-spacing:1px;">21969651707</div>
+    </div>
+    <button onclick="navigator.clipboard.writeText('21969651707').then(()=>{const b=document.getElementById('pix-copy-btn');b.textContent='✅ Copiado!';setTimeout(()=>b.textContent='📋 Copiar chave PIX',2000)})"
+      id="pix-copy-btn"
+      style="background:#32BCAD;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:.95rem;font-weight:bold;cursor:pointer;width:100%;margin-bottom:8px;">
+      📋 Copiar chave PIX
+    </button>
+    <button onclick="document.getElementById('pix-modal').style.display='none'"
+      style="background:none;border:1px solid #ddd;border-radius:8px;padding:8px 20px;font-size:.9rem;cursor:pointer;width:100%;color:#666;">
+      Fechar
+    </button>
+    <p style="font-size:.75rem;color:#bbb;margin-top:12px;">Dinandes L. T. S. Filho · obrigado! 🙏</p>
+  </div>
+</div>
+
 </body>
 </html>
